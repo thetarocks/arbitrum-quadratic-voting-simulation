@@ -1,0 +1,302 @@
+[
+    {
+        "id": "0xddfa0a249ebf8b1c4c17cb67b4ec1cea69b255815f23a9de35673d8c7d477afc",
+        "title": "Proposal for Approval of DeDaub as the ADPC Security Advisor",
+        "votes": 123623,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            114882344.12476036,
+            314563.67167988705,
+            385245.81656393746
+        ],
+        "scores_total": 115582153.61300386,
+        "start": 1714659460,
+        "end": 1715264260,
+        "snapshot": 207084726
+    },
+    {
+        "id": "0xf08fe07ad299db8400b53fc76f7cf2b686fcc82dde01102e0764afdbacf3805f",
+        "title": "ACryptoS Protocol - Funding Approval for LTIPP [Post Council Feedback]",
+        "votes": 65803,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            13401550.166403864,
+            53383979.56646746,
+            60765274.984400995
+        ],
+        "scores_total": 127550804.71738711,
+        "start": 1713952251,
+        "end": 1714557051,
+        "snapshot": 204298795
+    },
+    {
+        "id": "0xf7a22aac925d24841f102c310be08944a31489fb1f2040033a46b48dfff81435",
+        "title": "Connext - LTIPP [Post Council Feedback]",
+        "votes": 62029,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            125976309.07751586,
+            1473829.69592462,
+            18758420.212230414
+        ],
+        "scores_total": 146208558.9857025,
+        "start": 1713954690,
+        "end": 1714559490,
+        "snapshot": 204308407
+    },
+    {
+        "id": "0x6fc671517d63e69232fafd581e9461c50150008aa61f5571d2767a150d24779c",
+        "title": "Arbitrum as official sponsor of Ethereum Mexico 2023",
+        "votes": 53609,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            33993644.35347335,
+            18639075.592859868,
+            696226.9862036847
+        ],
+        "scores_total": 53328946.932540245,
+        "start": 1695644252,
+        "end": 1696249052,
+        "snapshot": 134456934
+    },
+    {
+        "id": "0xfd3551e2a0effc5d900e522b79300f68c351ec930cb05b62f537842508feceff",
+        "title": "Proposal: Security Council Elections Proposed Implementation Spec",
+        "votes": 53520,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            80668950.20360789,
+            178202.07603444194,
+            73082.77635965889
+        ],
+        "scores_total": 80920235.05600224,
+        "start": 1691510498,
+        "end": 1692115298,
+        "snapshot": 119422145
+    },
+    {
+        "id": "0x42f68a26ff5a5be692a80468a1d1885cf07d590836536f5169cc4b69f64f3f37",
+        "title": "The Arbitrum Coalition",
+        "votes": 51783,
+        "choices": [
+            "Fund The Coalition",
+            "Do Not Fund The Coalition",
+            "Abstain"
+        ],
+        "type": "single-choice",
+        "scores": [
+            75654740.65802632,
+            108120050.51454632,
+            56699087.02770899
+        ],
+        "scores_total": 240473878.20028165,
+        "start": 1699031243,
+        "end": 1699636043,
+        "snapshot": 146775123
+    },
+    {
+        "id": "0xe07fb357b2b40e042ca58a36a1534afc33a1d313d4781ac433536bc884fc3c65",
+        "title": "Arbitrum DAO Grants - Delegated Domain Allocation by Questbook",
+        "votes": 51622,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            85968691.21274212,
+            18458458.967357945,
+            119892.67470859864
+        ],
+        "scores_total": 104547042.85480964,
+        "start": 1688065200,
+        "end": 1688670000,
+        "snapshot": 106202734
+    },
+    {
+        "id": "0x5e43fdcaa085476a7be4fb638dd57f7b3f6b708fbbbe1380e54da126c7a095d2",
+        "title": "Proposal: Update Security Council Election Start Date to Ensure Time for Security Audit",
+        "votes": 51495,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            83105069.84913562,
+            349955.1739001044,
+            94342.99417016088
+        ],
+        "scores_total": 83549368.01720633,
+        "start": 1689965367,
+        "end": 1690570167,
+        "snapshot": 113554933
+    },
+    {
+        "id": "0xd295aabe7d3072c4397957e329ba164025c81e5844814388188bd2875d51e447",
+        "title": "Non-Constitutional AIP: Arbitrum Security Enhancement Fund",
+        "votes": 50737,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            32422545.318284705,
+            70060969.2219332,
+            20027173.12291615
+        ],
+        "scores_total": 122510687.66313587,
+        "start": 1698964793,
+        "end": 1699569593,
+        "snapshot": 146518501
+    },
+    {
+        "id": "0xa635e39a2c527f7a1eabf5ea22bdec6f4a265d6c69a06076e65fde0ae0a5941b",
+        "title": "AIP: ArbOS Version 11",
+        "votes": 50732,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            168238852.0035423,
+            134714.5434028188,
+            133425.77047071827
+        ],
+        "scores_total": 168506992.31741625,
+        "start": 1701123085,
+        "end": 1701727885,
+        "snapshot": 154720620
+    },
+    {
+        "id": "0x5c0cecde14ec0b83c954b47c2d79348ce249019b83894f3938fc80b45e1232da",
+        "title": "Time Management in Arbitrum\u2019s Governance",
+        "votes": 50713,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            40735896.10155481,
+            375513.1997078153,
+            1037550.1388892804
+        ],
+        "scores_total": 42148959.440151975,
+        "start": 1693454450,
+        "end": 1694059250,
+        "snapshot": 126581425
+    },
+    {
+        "id": "0x66b953a7cf4de9f6de54e6eb87ae291b5cc62f12c7fed68eba91043607883221",
+        "title": "Proposal: Building the Future of NFTs: The Rarible Protocol - Arbitrum Integration Proposal [REVISED]",
+        "votes": 50560,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            107698883.00377052,
+            12753589.954503668,
+            326833.34466538153
+        ],
+        "scores_total": 120779306.30293971,
+        "start": 1692990962,
+        "end": 1693595762,
+        "snapshot": 124919339
+    },
+    {
+        "id": "0x3404df8a6e105dcf8b60cb22f22928aeedd3ffa5d80dc36e4f8fd74d0f5f14cb",
+        "title": "Procurement Framework | Security : Non-Constitutional Proposal",
+        "votes": 50518,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            136281036.32331377,
+            1606852.1087498053,
+            14132017.14155571
+        ],
+        "scores_total": 152019905.5736198,
+        "start": 1700951947,
+        "end": 1701556747,
+        "snapshot": 154073208
+    },
+    {
+        "id": "0x1ac6079871dc4af55b7d67eae130e4c1bbcbabd9bb35405bc1733ef2efe45875",
+        "title": "Consolidate Security Proposals into a RFP Process",
+        "votes": 50045,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            186941097.9039315,
+            460312.2025068188,
+            142421.63659919926
+        ],
+        "scores_total": 187543831.7430367,
+        "start": 1699029266,
+        "end": 1699634066,
+        "snapshot": 146767723
+    },
+    {
+        "id": "0xa0e14b85197d73e825ac30f72b7d895d644ed06159a32a578f4efe47a2739b2f",
+        "title": "[Non-Constitutional] Fund the Arbitrum Grants Framework Proposal Milestone 1",
+        "votes": 49531,
+        "choices": [
+            "For",
+            "Against",
+            "Abstain"
+        ],
+        "type": "basic",
+        "scores": [
+            53146424.65610952,
+            46959029.86642403,
+            606267.4958540833
+        ],
+        "scores_total": 100711722.01838684,
+        "start": 1688666400,
+        "end": 1689271200,
+        "snapshot": 108504324
+    }
+]
