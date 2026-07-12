@@ -17,10 +17,7 @@ SPACE_ID = "arbitrumfoundation.eth"
 
 TARGET_PROPOSALS = 15
 FETCH_POOL = 200
-PAGE_SIZE = 1000             # Bumping this back to 1000 reduces total request count from 1200 to 120!
-
-# Scroll down to line 192 inside `fetch_all_votes` and change the sleep timer:
-time.sleep(2.5)              # Bumping this from 1.1 to 2.5 gives the server a healthy rest between pulls
+PAGE_SIZE = 1000             
 
 VALID_PROPOSAL_TYPES = {"single-choice", "basic"}
 
@@ -121,7 +118,7 @@ def fetch_top_valid_proposals(limit=TARGET_PROPOSALS, fetch_pool=FETCH_POOL):
     print(f"Fetching top {limit} valid closed Arbitrum proposals by voter turnout...")
 
     query = """
-    query ($space: String!, $limit: Int!) {
+    query ($space: String!,$limit: Int!) {
       proposals(
         first: $limit,
         where: { space: $space, state: "closed" },
@@ -194,10 +191,10 @@ def fetch_all_votes(proposal_id):
 
     while True:
         query = f"""
-        query ($proposal: String!, $lastTimestamp: Int!) {{
+        query ($proposal: String!,$lastTimestamp: Int!) {{
           votes(
             first: {PAGE_SIZE},
-            where: {{ proposal: $proposal, created_gt: $lastTimestamp }},
+            where: {{ proposal: $proposal, created_gt:$lastTimestamp }},
             orderBy: "created",
             orderDirection: asc
           ) {{
@@ -230,7 +227,7 @@ def fetch_all_votes(proposal_id):
 
         print(f"    Collected {len(all_votes)} votes total... checkpoint saved.")
 
-        time.sleep(1.1)
+        time.sleep(2.5)  # Healthy rest break between requests
 
     return all_votes
 
@@ -288,7 +285,7 @@ with open("proposals_manifest.json", "r") as f:
 summary_results = []
 
 print("\n==================================================================")
-print("BATCH SIMULATION ENGINE: QUADRATIC VOTING & MARGIN COMPRESSION")
+print("BATCH SIMULATION ENGINE: SQUARE-ROOT VOTING")
 print("==================================================================")
 
 for p in proposals_manifest:
@@ -313,7 +310,6 @@ for p in proposals_manifest:
     # -----------------------------
     # Whale concentration
     # -----------------------------
-
     sorted_vp = df_p["vp"].sort_values(ascending=False)
 
     top_1_share = safe_pct(sorted_vp.head(1).sum(), total_vp)
@@ -326,7 +322,6 @@ for p in proposals_manifest:
     # -----------------------------
     # Traditional token voting
     # -----------------------------
-
     trad_votes = df_p.groupby("choice")["vp"].sum()
     trad_pct = trad_votes / trad_votes.sum() * 100
 
@@ -339,14 +334,13 @@ for p in proposals_manifest:
     )
 
     # -----------------------------
-    # Snapshot-style QV simulation
-    # qv_score(choice) = (sum sqrt(vp)) ^ 2
+    # Corrected QV Simulation
+    # qv_score(choice) = sum(sqrt(vp))
     # -----------------------------
+    df_p["compressed_weight"] = np.sqrt(df_p["vp"])
 
-    df_p["sqrt_vp"] = np.sqrt(df_p["vp"])
-
-    qv_raw = df_p.groupby("choice")["sqrt_vp"].sum()
-    qv_scores = qv_raw ** 2
+    # CHANGED: Dropped the erroneous `** 2` exponential scaling component
+    qv_scores = df_p.groupby("choice")["compressed_weight"].sum()
     qv_pct = qv_scores / qv_scores.sum() * 100
 
     qv_winner = qv_scores.idxmax()
@@ -358,17 +352,14 @@ for p in proposals_manifest:
     )
 
     # -----------------------------
-    # Difference metrics
+    # Difference metrics (Percentage Points)
     # -----------------------------
-
     flipped = trad_winner != qv_winner
-    margin_change = qv_margin - trad_margin
-    margin_compression = trad_margin - qv_margin
+    margin_delta_pp = qv_margin - trad_margin  # Expressed directly as absolute percentage points
 
     # -----------------------------
     # Validate reconstruction
     # -----------------------------
-
     snapshot_scores_total = float(p.get("scores_total") or 0)
     reconstruction_diff = abs(total_vp - snapshot_scores_total)
 
@@ -390,8 +381,7 @@ for p in proposals_manifest:
 
         "Traditional Margin %": round(trad_margin, 2),
         "QV Margin %": round(qv_margin, 2),
-        "Margin Change QV-Trad %": round(margin_change, 2),
-        "Margin Compression %": round(margin_compression, 2),
+        "Margin Delta (pp)": round(margin_delta_pp, 2),
 
         "Total VP Reconstructed": round(total_vp, 2),
         "Snapshot Scores Total": round(snapshot_scores_total, 2),
